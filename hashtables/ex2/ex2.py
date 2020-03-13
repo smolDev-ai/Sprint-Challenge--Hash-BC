@@ -29,7 +29,4 @@ def reconstruct_trip(tickets, length):
             # Ex1 mentions that retrieve returns none if key does not exist.
             route[i] = hash_table_retrieve(hashtable, "NONE")
     # return full array
-    return route[:-1]        
-
-    
-
+    return route[:-1]

@@ -20,8 +20,8 @@ def get_indices_of_item_weights(weights, length, limit):
         hash_table_insert(ht, weights[i], i)
 
     for i in range(length):
-       # subtract the limit from the current weight to get the number it
-       # needs  
+        # subtract the limit from the current weight to get the number it
+        # needs
         difference = hash_table_retrieve(ht, limit - weights[i])
 
         if difference is not None:
@@ -31,7 +31,7 @@ def get_indices_of_item_weights(weights, length, limit):
     # Addition implementation
     # for i in range(length):
     #     hash_table_insert(ht, weights[i], i)
-    
+
     # for i, j in enumerate(weights):
     #     unit_1 = weights[i]
     #     unit_2 = weights[j]
