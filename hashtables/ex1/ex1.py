@@ -9,11 +9,27 @@ from hashtables import (HashTable,
 def get_indices_of_item_weights(weights, length, limit):
     ht = HashTable(16)
 
-    """
-    YOUR CODE HERE
-    """
+    # Goal: Create a solution that is O(n)
+    # two unnested for loops?
+    # simple subtraction? Addition and then move?
+    # Add them to the hashtable first
+
+
+    # Subtraction implementation
+    for i in range(length):
+        hash_table_insert(ht, weights[i], i)
+
+    for i in range(length):
+       # subtract the limit from the current weight to get the number it
+       # needs  
+        difference = hash_table_retrieve(ht, limit - weights[i])
+        print(f"Weights: {hash_table_retrieve(ht, weights[i])}")
+
+        if difference is not None:
+            return (difference, i)
 
     return None
+
 
 
 def print_answer(answer):
